@@ -1,0 +1,13 @@
+File Upload Handling:
+           The home route in app.py handles both GET and POST requests.
+           On a POST request, the uploaded CSV files are saved to the uploads directory.
+Processing CSV Files:
+           The process_files function reads the group and hostel information from the uploaded CSV files using Pandas.
+           It checks for required columns and raises an error if any are missing.
+           The function filters hostels by gender and sorts them by remaining capacity.
+           It allocates rooms to groups based on availability and capacity, recording allocation details.
+Displaying Results:
+           The allocation results are passed to the result.html template for display.
+           A download link for the allocation details CSV file is provided.
+Error Handling:
+           If required columns are missing from the CSV files, a KeyError is raised and a meaningful error message is displayed.
