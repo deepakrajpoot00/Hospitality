@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allocation Result</title>
+</head>
+<body>
+    <h1>Room Allocation Result</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Group ID</th>
+                <th>Hostel Name</th>
+                <th>Room Number</th>
+                <th>Members Allocated</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for group_id, allocations in group_allocation.items() %}
+                {% for allocation in allocations %}
+                <tr>
+                    <td>{{ group_id }}</td>
+                    <td>{{ allocation[0] }}</td>
+                    <td>{{ allocation[1] }}</td>
+                    <td>{{ allocation[2] }}</td>
+                </tr>
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{{ url_for('download', filename=output_path.split('/')[-1]) }}">Download Allocation Details</a>
+</body>
+</html>
