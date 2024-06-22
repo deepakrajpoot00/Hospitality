@@ -1,0 +1,21 @@
+Install Python: Ensure you have Python installed on your system.
+Install Flask and Pandas using commond prompt.
+Create the file "app.py"
+Create a directory called 'Project' which contain the file "app.py". 
+Create another directory called 'templates' inside directory 'Project' which contain the file "index.html" and "result.html"
+Create another directory called 'static' inside directory 'Project' which contain a favicon.
+IT WILL LOOK LIKE THIS:-
+Project/
+│
+├── app.py
+├── templates/
+│   ├── index.html
+│   └── result.html
+├── static/
+└── uploads/
+
+Navigate to your project directory in the command prompt or terminal.
+Run the application with: python app.py
+Open a web browser and navigate to http://127.0.0.1:5000.
+upload the groups.csv and hostels.csv files.
+The application will process the files, display the allocation results, and provide a download link for the allocation details.
